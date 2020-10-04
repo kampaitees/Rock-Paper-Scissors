@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+        <script src="webcam.js"></script>
+        <script src="rps-dataset.js"></script>
+        <link rel="stylesheet" href="styles.css">        
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1 style="font-size:37px;text-align: center; color: aliceblue;">Rock, Paper & Scissors</h1>
+            <video autoplay playsinline muted id="wc" width="475" height="220" style="border:10px solid;color: white;text-align: center;"></video>
+        </div><br>
+        <div class="wrapper">
+            <button type="button" class="button"  id="0" onclick="handleButton(this)" >Rock</button>
+            <button type="button" class="button" id="1" onclick="handleButton(this)" >Paper</button>
+            <button type="button" class="button" id="2" onclick="handleButton(this)" >Scissors</button>
+        </div><br>
+        <div class="wrapper1" id="rocksamples" style="color: aliceblue;">Rock Samples:</div><br>
+        <div class="wrapper1" id="papersamples" style="color: aliceblue">Paper Samples:</div><br>
+        <div class="wrapper2" id="scissorssamples" style="color: aliceblue">Scissors Samples:</div><br>
+        <div class="wrapper">
+            <button type="button" class="button" id="train" onclick="doTraining()" >Train Network</button>
+        </div><br>
+        
+        <div id="dummy" style="color: aliceblue; text-align: center;"><h3>Click "Start Predicting" for predictions, & "Stop Predicting" to end</h3></div><br>
+        <div class="wrapper">
+            <button class="button" type="button" id="startPredicting" onclick="startPredicting()" >Start Predicting</button>
+            <button class="button" type="button" id="stopPredicting" onclick="stopPredicting()" >Stop Predicting</button>
+        </div><br>
+        <div class="wrapper3" id="prediction" style="color: aliceblue"></div>
+    </body>
+    <script src="index.js"></script>
+</html>
